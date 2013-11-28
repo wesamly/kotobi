@@ -1,0 +1,57 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Edit Book{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li><a href="{{ path('wesamly_kotobi_bookslist') }}">Books</a></li>
+        <li class="active">Edit</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Edit Book</h1>
+
+    {{ form_start(form, {'attr': {'id': 'form_book_edit'}}) }}
+
+    <div class="form-group">
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.title) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.intro) }}
+        {{ form_widget(form.intro, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.intro) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.published) }}
+        {{ form_widget(form.published, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.published) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.type) }}
+        {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.type) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.category) }}
+        {{ form_widget(form.category, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.category) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.new_category) }}
+        {{ form_widget(form.new_category, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.new_category) }}
+    </div>
+
+    {{ form_widget(form.save, {'attr': {'class': 'btn btn-default'}}) }}
+
+    {{ form_end(form) }}
+
+{% endblock %}

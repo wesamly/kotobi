@@ -1,0 +1,38 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Books List{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li class="active">Books</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Books List</h1>
+
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_addbook') }}"><span class="glyphicon glyphicon-plus"></span> Add Book</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th><th>Title</th><th>Intro</th><th>Published</th><th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.intro }}</td>
+                <td>{{ book.published }}</td>
+                <td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_editbook', {id: book.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deletebook', {id: book.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}

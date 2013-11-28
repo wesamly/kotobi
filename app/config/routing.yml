@@ -1,0 +1,4 @@
+wesamly_kotobi:
+    resource: "@WesamlyKotobiBundle/Resources/config/routing.yml"
+    prefix:   /kotobi
+

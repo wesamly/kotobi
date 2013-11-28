@@ -1,0 +1,36 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Categories{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li class="active">Categories</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Categories List</h1>
+
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_addcategory') }}"><span class="glyphicon glyphicon-plus"></span> Add Category</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Books Count</th><th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>-</td>
+                <td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_editcategory', {id: category.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deletecategory', {id: category.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

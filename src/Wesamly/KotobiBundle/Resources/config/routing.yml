@@ -1,0 +1,47 @@
+wesamly_kotobi_homepage:
+    pattern:  /
+    defaults: { _controller: WesamlyKotobiBundle:Default:index }
+
+wesamly_kotobi_about:
+    pattern:  /about/
+    defaults: { _controller: WesamlyKotobiBundle:Default:about }
+
+wesamly_kotobi_bookslist:
+    pattern: /books/
+    defaults: { _controller: WesamlyKotobiBundle:Books:index }
+
+wesamly_kotobi_addbook:
+    pattern: /books/add/
+    defaults: { _controller: WesamlyKotobiBundle:Books:add }
+
+wesamly_kotobi_editbook:
+    pattern: /books/edit/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Books:edit }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_deletebook:
+    pattern: /books/delete/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Books:delete }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_categorylist:
+    pattern: /category/
+    defaults: { _controller: WesamlyKotobiBundle:Category:index }
+
+wesamly_kotobi_addcategory:
+    pattern: /category/add/
+    defaults: { _controller: WesamlyKotobiBundle:Category:add }
+
+wesamly_kotobi_editcategory:
+    pattern: /category/edit/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Category:edit }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_deletecategory:
+    pattern: /category/delete/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Category:delete }
+    requirements:
+      id: \d+
