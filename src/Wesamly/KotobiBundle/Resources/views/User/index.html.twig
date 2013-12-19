@@ -1,0 +1,49 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Users List{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li class="active">Users</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Users List</h1>
+
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_adduser') }}"><span class="glyphicon glyphicon-plus"></span> Add User</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th><th>Username</th><th>Email</th><th>Is Active</th><th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td class="icon-cell">
+                    {% if user.isActive %}
+                        <span class="glyphicon glyphicon-ok-circle user-active"></span>
+                    {% else %}
+                        <span class="glyphicon glyphicon-remove-circle user-disabled"></span>
+                    {% endif %}
+                </td>
+                <td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_edituser', {id: user.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deleteuser', {id: user.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Edit User{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li><a href="{{ path('wesamly_kotobi_userlist') }}">Users</a></li>
+        <li class="active">Edit</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Edit User</h1>
+
+    {{ form_start(form, {'attr': {'id': 'form_user_edit'}}) }}
+
+    {% for child in form.children %}
+
+        {% if child.vars.block_prefixes.1 == 'text' %}
+
+            <div class="form-group">
+                {{ form_label(child) }}
+                {{ form_widget(child, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(child) }}
+            </div>
+        {% elseif child.vars.block_prefixes.1 == 'repeated' %}
+
+            {% for passwordField in child %}
+                <div class="form-group">
+                    {{ form_label(passwordField) }}
+                    {{ form_widget(passwordField, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            {% endfor %}
+
+        {% elseif child.vars.block_prefixes.1 == 'checkbox' %}
+
+            <div class="checkbox">
+                <label for="{{ child.vars.id }}"
+                       class="{{ child.vars.required ? 'required' : '' }}">
+                    {{ form_widget(child) }}
+                    {{ child.vars.label }}
+                </label>
+            </div>
+
+        {% elseif child.vars.block_prefixes.1 == 'submit' %}
+
+            {{ form_widget(child, {'attr': {'class': 'btn btn-default'}}) }}
+
+        {% else %}
+
+            {{ form_row(child) }}
+
+        {% endif %}
+    {% endfor %}
+
+    {{ form_end(form) }}
+
+{% endblock %}

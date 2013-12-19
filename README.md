@@ -16,10 +16,10 @@ Features Implemented
 
   * Categories
 
+  * User Login
+
 ToDos
 ------
-
-  * User Login
 
   * Tags
 

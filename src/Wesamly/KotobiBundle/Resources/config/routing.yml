@@ -45,3 +45,33 @@ wesamly_kotobi_deletecategory:
     defaults: { _controller: WesamlyKotobiBundle:Category:delete }
     requirements:
       id: \d+
+
+wesamly_kotobi_userlist:
+    pattern: /users/
+    defaults: { _controller: WesamlyKotobiBundle:User:index }
+
+wesamly_kotobi_adduser:
+    pattern: /users/add/
+    defaults: { _controller: WesamlyKotobiBundle:User:add }
+
+wesamly_kotobi_edituser:
+    pattern: /users/edit/{id}
+    defaults: { _controller: WesamlyKotobiBundle:User:edit }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_deleteuser:
+    pattern: /users/delete/{id}
+    defaults: { _controller: WesamlyKotobiBundle:User:delete }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_login:
+    path:   /login
+    defaults:  { _controller: WesamlyKotobiBundle:Security:login }
+
+wesamly_kotobi_login_check:
+    path:   /login_check
+
+wesamly_kotobi_logout:
+    path:   /logout
