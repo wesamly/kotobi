@@ -18,9 +18,9 @@ class UserType extends AbstractType
                 'required' =>false
             ));
         $builder->add('email', 'email');
-        $builder->add('isActive', null,array(
-            'label'     => 'Is Active',
-                'required' =>false
+        $builder->add('isActive', null, array(
+                'label'     =>  'Is Active',
+                'required'  =>  false
             ));
         $builder->add('save', 'submit');
     }

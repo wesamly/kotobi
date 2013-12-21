@@ -1,3 +1,4 @@
+#General
 wesamly_kotobi_homepage:
     pattern:  /
     defaults: { _controller: WesamlyKotobiBundle:Default:index }
@@ -6,6 +7,7 @@ wesamly_kotobi_about:
     pattern:  /about/
     defaults: { _controller: WesamlyKotobiBundle:Default:about }
 
+#Books
 wesamly_kotobi_bookslist:
     pattern: /books/
     defaults: { _controller: WesamlyKotobiBundle:Books:index }
@@ -26,6 +28,7 @@ wesamly_kotobi_deletebook:
     requirements:
       id: \d+
 
+#Categories
 wesamly_kotobi_categorylist:
     pattern: /category/
     defaults: { _controller: WesamlyKotobiBundle:Category:index }
@@ -46,6 +49,7 @@ wesamly_kotobi_deletecategory:
     requirements:
       id: \d+
 
+#Users
 wesamly_kotobi_userlist:
     pattern: /users/
     defaults: { _controller: WesamlyKotobiBundle:User:index }
@@ -66,6 +70,7 @@ wesamly_kotobi_deleteuser:
     requirements:
       id: \d+
 
+#Login
 wesamly_kotobi_login:
     path:   /login
     defaults:  { _controller: WesamlyKotobiBundle:Security:login }
@@ -75,3 +80,24 @@ wesamly_kotobi_login_check:
 
 wesamly_kotobi_logout:
     path:   /logout
+
+#Tags
+wesamly_kotobi_taglist:
+    pattern: /tag/
+    defaults: { _controller: WesamlyKotobiBundle:Tag:index }
+
+wesamly_kotobi_addtag:
+    pattern: /tag/add/
+    defaults: { _controller: WesamlyKotobiBundle:Tag:add }
+
+wesamly_kotobi_edittag:
+    pattern: /tag/edit/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Tag:edit }
+    requirements:
+      id: \d+
+
+wesamly_kotobi_deletetag:
+    pattern: /tag/delete/{id}
+    defaults: { _controller: WesamlyKotobiBundle:Tag:delete }
+    requirements:
+      id: \d+    

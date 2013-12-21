@@ -25,6 +25,16 @@ class BookType extends AbstractType
                     'mapped'=>false,
                     'required' =>false
                 ))
+            ->add('tags', 'entity', array(
+                    'class' => 'WesamlyKotobiBundle:Tag',
+                    'property' => 'name',
+                    'multiple' => true,
+                    'expanded' => true
+                ))
+            ->add('new_tags','text', array(
+                    'mapped'=>false,
+                    'required' =>false
+                ))
             ->add('save', 'submit');
     }
 

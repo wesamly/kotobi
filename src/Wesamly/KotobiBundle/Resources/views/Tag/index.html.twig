@@ -1,0 +1,36 @@
+{% extends 'WesamlyKotobiBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Tags{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
+        <li class="active">Tags</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Tags List</h1>
+
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_addtag') }}"><span class="glyphicon glyphicon-plus"></span> Add Tag</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Books Count</th><th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for tag in tags %}
+            <tr>
+                <td>{{ tag.id }}</td>
+                <td>{{ tag.name }}</td>
+                <td>-</td>
+                <td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_edittag', {id: tag.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deletetag', {id: tag.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

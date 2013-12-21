@@ -50,6 +50,24 @@
         {{ form_errors(form.new_category) }}
     </div>
 
+    <div class="form-group">
+        {{ form_label(form.tags) }}
+
+        {% for checkboxField in form.tags %}
+
+                <label for="{{ checkboxField.vars.id }}"
+                       class="{{ checkboxField.vars.required ? 'required' : '' }} checkbox">
+                    {{ form_widget(checkboxField) }}
+                    {{ checkboxField.vars.label }}
+                </label>
+
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.new_tags) }}
+        {{ form_widget(form.new_tags, {'attr': {'class': 'form-control','placeholder':'use comma separated words'}}) }}
+        {{ form_errors(form.new_tags) }}
+    </div>
     {{ form_widget(form.save, {'attr': {'class': 'btn btn-default'}}) }}
 
     {{ form_end(form) }}

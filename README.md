@@ -18,10 +18,10 @@ Features Implemented
 
   * User Login
 
+  * Tags
+
 ToDos
 ------
-
-  * Tags
 
   * Translation
 
