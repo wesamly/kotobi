@@ -1,17 +1,17 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Edit User{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Edit User{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li><a href="{{ path('wesamly_kotobi_userlist') }}">Users</a></li>
-        <li class="active">Edit</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li><a href="{{ path('wesamly_kotobi_userlist') }}">{% trans %}Users{% endtrans %}</a></li>
+        <li class="active">{% trans %}Edit{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>Edit User</h1>
+    <h1>{% trans %}Edit User{% endtrans %}</h1>
 
     {{ form_start(form, {'attr': {'id': 'form_user_edit'}}) }}
 
@@ -39,8 +39,9 @@
                 <label for="{{ child.vars.id }}"
                        class="{{ child.vars.required ? 'required' : '' }}">
                     {{ form_widget(child) }}
-                    {{ child.vars.label }}
+                    {{ form_label(child) }}
                 </label>
+
             </div>
 
         {% elseif child.vars.block_prefixes.1 == 'submit' %}

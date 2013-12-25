@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="app_title">
+                <source>Kotobi</source>
+                <target>كتبي</target>
+            </trans-unit>
+            <trans-unit id="dashboard">
+                <source>Dashboard</source>
+                <target>الرئيسية</target>
+            </trans-unit>
+            <trans-unit id="books">
+                <source>Books</source>
+                <target>الكتب</target>
+            </trans-unit>
+            <trans-unit id="categories">
+                <source>Categories</source>
+                <target>التصنيفات</target>
+            </trans-unit>
+            <trans-unit id="tags">
+                <source>Tags</source>
+                <target>الوسوم</target>
+            </trans-unit>
+            <trans-unit id="users">
+                <source>Users</source>
+                <target>المستخدمين</target>
+            </trans-unit>
+            <trans-unit id="list">
+                <source>List</source>
+                <target>قائمة</target>
+            </trans-unit>
+            <trans-unit id="add">
+                <source>Add</source>
+                <target>إضافة</target>
+            </trans-unit>
+            <trans-unit id="language">
+                <source>Language</source>
+                <target>اللغة</target>
+            </trans-unit>
+            <trans-unit id="about">
+                <source>About</source>
+                <target>عن التطبيق</target>
+            </trans-unit>
+            <trans-unit id="logout">
+                <source>Logout</source>
+                <target>تسجيل الخروج</target>
+            </trans-unit>
+            <trans-unit id="signedas">
+                <source>Signed in as</source>
+                <target>مسجل الدخول باسم</target>
+            </trans-unit>
+            <trans-unit id="start">
+                <source>Start</source>
+                <target>ابدأ</target>
+            </trans-unit>
+            <trans-unit id="read">
+                <source>Read</source>
+                <target>اقرأ</target>
+            </trans-unit>
+            <trans-unit id="manage_books">
+                <source>Manage Books</source>
+                <target>إدارة الكتب</target>
+            </trans-unit>
+            <trans-unit id="manage_categores">
+                <source>Manage Categories</source>
+                <target>إدارة التصنيفات</target>
+            </trans-unit>
+            <trans-unit id="manage_tags">
+                <source>Manage Tags</source>
+                <target>إدارة الوسوم</target>
+            </trans-unit>
+            <trans-unit id="manage_users">
+                <source>Manage Users</source>
+                <target>إدارة المستخدمين</target>
+            </trans-unit>
+            <trans-unit id="about_app">
+                <source>About Kotobi</source>
+                <target>حول كتبي</target>
+            </trans-unit>
+            <trans-unit id="about_intro">
+                <source>This is a books management application.</source>
+                <target>هذا تطبيق لإدارة الكتب.</target>
+            </trans-unit>
+            <trans-unit id="books_list">
+                <source>Books List</source>
+                <target>قائمة الكتب</target>
+            </trans-unit>
+            <trans-unit id="add_book">
+                <source>Add Book</source>
+                <target>أضف كتابا</target>
+            </trans-unit>
+            <trans-unit id="edit">
+                <source>Edit</source>
+                <target>تعديل</target>
+            </trans-unit>
+            <trans-unit id="delete">
+                <source>Delete</source>
+                <target>حذف</target>
+            </trans-unit>
+            <trans-unit id="id">
+                <source>ID</source>
+                <target>ر.م</target>
+            </trans-unit>
+            <trans-unit id="title">
+                <source>Title</source>
+                <target>العنوان</target>
+            </trans-unit>
+            <trans-unit id="into">
+                <source>Intro</source>
+                <target>تعريف</target>
+            </trans-unit>
+            <trans-unit id="published">
+                <source>Published</source>
+                <target>تاريخ النشر</target>
+            </trans-unit>
+            <trans-unit id="type">
+                <source>Type</source>
+                <target>النوع</target>
+            </trans-unit>
+            <trans-unit id="category">
+                <source>Category</source>
+                <target>التصنيف</target>
+            </trans-unit>
+            <trans-unit id="new_tags">
+                <source>New tags</source>
+                <target>وسوم جديدة</target>
+            </trans-unit>
+            <trans-unit id="edit_book">
+                <source>Edit Book</source>
+                <target>تعديل كتاب</target>
+            </trans-unit>
+            <trans-unit id="save">
+                <source>Save</source>
+                <target>حفظ</target>
+            </trans-unit>
+            <trans-unit id="delete_book">
+                <source>Delete Book</source>
+                <target>حذف كتاب</target>
+            </trans-unit>
+            <trans-unit id="confirm">
+                <source>Confirm</source>
+                <target>تأكيد</target>
+            </trans-unit>
+            <trans-unit id="cancel">
+                <source>Cancel</source>
+                <target>تراجع</target>
+            </trans-unit>
+            <trans-unit id="confirm_delete_book">
+                <source>Are you sure about deleting this book?</source>
+                <target>هل أنت متأكد من حذف هذا الكتاب؟</target>
+            </trans-unit>
+            <trans-unit id="category_list">
+                <source>Categories List</source>
+                <target>قائمة التصنيفات</target>
+            </trans-unit>
+            <trans-unit id="add_category">
+                <source>Add Category</source>
+                <target>أضف تصنيفا</target>
+            </trans-unit>
+            <trans-unit id="name">
+                <source>Name</source>
+                <target>الاسم</target>
+            </trans-unit>
+            <trans-unit id="books_count">
+                <source>Books Count</source>
+                <target>عدد الكتب</target>
+            </trans-unit>
+            <trans-unit id="edit_category">
+                <source>Edit Category</source>
+                <target>تعديل تصنيف</target>
+            </trans-unit>
+            <trans-unit id="delete_category">
+                <source>Delete Category</source>
+                <target>حذف تصنيف</target>
+            </trans-unit>
+            <trans-unit id="confirm_delete_category">
+                <source>Are you sure about deleting this category?</source>
+                <target>هل أنت متأكد من حذف هذا التصنيف؟</target>
+            </trans-unit>
+            <trans-unit id="tags_list">
+                <source>Tags List</source>
+                <target>قائمة الوسوم</target>
+            </trans-unit>
+            <trans-unit id="add_tag">
+                <source>Add Tag</source>
+                <target>إضافة وسم</target>
+            </trans-unit>
+            <trans-unit id="edit_tag">
+                <source>Edit Tag</source>
+                <target>تعديل وسم</target>
+            </trans-unit>
+            <trans-unit id="delete_tag">
+                <source>Delete Tag</source>
+                <target>حذف وسم</target>
+            </trans-unit>
+            <trans-unit id="confirm_delete_tag">
+                <source>Are you sure about deleting this tag?</source>
+                <target>هل أنت متأكد من حذف هذا الوسم؟</target>
+            </trans-unit>
+            <trans-unit id="users_list">
+                <source>Users List</source>
+                <target>قائمة المستخدمين</target>
+            </trans-unit>
+            <trans-unit id="add_user">
+                <source>Add User</source>
+                <target>إضافة مستخدم</target>
+            </trans-unit>
+            <trans-unit id="username">
+                <source>Username</source>
+                <target>اسم المستخدم</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+                <target>البريد الإلكتروني</target>
+            </trans-unit>
+            <trans-unit id="is_active">
+                <source>Is Active</source>
+                <target>مفعّل</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>Password</source>
+                <target>كلمة المرور</target>
+            </trans-unit>
+            <trans-unit id="edit_user">
+                <source>Edit User</source>
+                <target>تعديل مستخدم</target>
+            </trans-unit>
+            <trans-unit id="delete_user">
+                <source>Delete User</source>
+                <target>حذف مستخدم</target>
+            </trans-unit>
+            <trans-unit id="confirm_delete_user">
+                <source>Are you sure about deleting this user?</source>
+                <target>هل أنت متأكد من حذف هذا المستخدم؟</target>
+            </trans-unit>
+            <trans-unit id="login_title">
+                <source>}Login to Kotobi</source>
+                <target>الدخول إلى كتبي</target>
+            </trans-unit>
+            <trans-unit id="login_msg">
+                <source>Please Login</source>
+                <target>الرجاء تسجيل الدخول</target>
+            </trans-unit>
+            <trans-unit id="sign_in">
+                <source>Sign in</source>
+                <target>دخول</target>
+            </trans-unit>
+            <trans-unit id="hardcover">
+                <source>Hardcover</source>
+                <target>غلاف سميك</target>
+            </trans-unit>
+            <trans-unit id="paperback">
+                <source>Paperback</source>
+                <target>غلاف ورقي</target>
+            </trans-unit>
+            <trans-unit id="ebook">
+                <source>E-Book</source>
+                <target>كتاب إلكتروني</target>
+            </trans-unit>
+            <trans-unit id="choose_type">
+                <source>Choose a Type</source>
+                <target>اختر النوع</target>
+            </trans-unit>
+            <trans-unit id="choose_category">
+                <source>Choose a Category</source>
+                <target>اختر تصنيفا</target>
+            </trans-unit>
+            <trans-unit id="new_category">
+                <source>New category</source>
+                <target>تصنيف جديد</target>
+            </trans-unit>
+            <trans-unit id="new_tags_help">
+                <source>use comma separated words</source>
+                <target>افصل بين الكلمات بواسطة الفاصلة</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

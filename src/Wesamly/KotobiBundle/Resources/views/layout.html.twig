@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!--link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"-->
     {# ToDo: Translate-able System Title variable #}
-    <title>{% block title %}Kotobi{% endblock %}</title>
+    <title>{% block title %}{% trans %}Kotobi{% endtrans %}{% endblock %}</title>
 
 
     {% block styles %}
@@ -17,6 +17,10 @@
 
         <!-- Custom styles for this template -->
         <link href="{{ asset('bundles/wesamlykotobi/css/backend.css') }}" rel="stylesheet">
+
+        {% if app.request.locale == 'ar' %}
+            <link href="{{ asset('bundles/wesamlykotobi/css/backend_rtl.css') }}" rel="stylesheet">
+        {% endif %}
     {% endblock %}
 
 </head>
@@ -32,45 +36,52 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ path('wesamly_kotobi_homepage') }}">Kotobi</a>
+            <a class="navbar-brand" href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Kotobi{% endtrans %}</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li {% if app.request.attributes.get('_route') == 'wesamly_kotobi_homepage' %}class="active"{% endif %}><a href="{{ path('wesamly_kotobi_homepage') }}">Home</a></li>
+                <li {% if app.request.attributes.get('_route') == 'wesamly_kotobi_homepage' %}class="active"{% endif %}><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Books <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}Books{% endtrans %} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ path('wesamly_kotobi_bookslist') }}">List</a></li>
-                        <li><a href="{{ path('wesamly_kotobi_addbook') }}">Add</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_bookslist') }}">{% trans %}List{% endtrans %}</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_addbook') }}">{% trans %}Add{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}Categories{% endtrans %} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ path('wesamly_kotobi_categorylist') }}">List</a></li>
-                        <li><a href="{{ path('wesamly_kotobi_addcategory') }}">Add</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_categorylist') }}">{% trans %}List{% endtrans %}</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_addcategory') }}">{% trans %}Add{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tags <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}Tags{% endtrans %} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ path('wesamly_kotobi_taglist') }}">List</a></li>
-                        <li><a href="{{ path('wesamly_kotobi_addtag') }}">Add</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_taglist') }}">{% trans %}List{% endtrans %}</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_addtag') }}">{% trans %}Add{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Users <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}Users{% endtrans %} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ path('wesamly_kotobi_userlist') }}">List</a></li>
-                        <li><a href="{{ path('wesamly_kotobi_adduser') }}">Add</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_userlist') }}">{% trans %}List{% endtrans %}</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_adduser') }}">{% trans %}Add{% endtrans %}</a></li>
                     </ul>
                 </li>
-                <li {% if app.request.attributes.get('_route') == 'wesamly_kotobi_about' %}class="active"{% endif %}><a href="{{ path('wesamly_kotobi_about') }}">About</a></li>
-                <li><a href="{{ path('wesamly_kotobi_logout') }}">Logout</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}Language{% endtrans %} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('wesamly_kotobi_setlang', { _locale: 'en'}) }}">English</a></li>
+                        <li><a href="{{ path('wesamly_kotobi_setlang', { _locale: 'ar'}) }}">العربية</a></li>
+                    </ul>
+                </li>
+                <li {% if app.request.attributes.get('_route') == 'wesamly_kotobi_about' %}class="active"{% endif %}><a href="{{ path('wesamly_kotobi_about') }}">{% trans %}About{% endtrans %}</a></li>
+                <li><a href="{{ path('wesamly_kotobi_logout') }}">{% trans %}Logout{% endtrans %}</a></li>
             </ul>
 
             <p class="navbar-text navbar-right">
-                Signed in as <strong><a href="#" class="navbar-link">{{ app.user.username }}</a></strong>
+                {% trans %}Signed in as{% endtrans %} <strong><a href="#" class="navbar-link">{{ app.user.username }}</a></strong>
             </p>
 
         </div><!--/.nav-collapse -->
@@ -82,12 +93,11 @@
     <div class="wrapper">
         {% block breadcrumb %}
             <ol class="breadcrumb">
-                <li class="active">Dashboard</li>
+                <li class="active">{% trans %}Dashboard{% endtrans %}</li>
             </ol>
         {% endblock %}
         {% block content %}
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <!-- content will be added using extending files -->
         {% endblock %}
     </div>
 

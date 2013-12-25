@@ -1,17 +1,17 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Edit Category{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Edit Category{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li><a href="{{ path('wesamly_kotobi_categorylist') }}">Categories</a></li>
-        <li class="active">Edit</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li><a href="{{ path('wesamly_kotobi_categorylist') }}">{% trans %}Categories{% endtrans %}</a></li>
+        <li class="active">{% trans %}Edit{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>Edit Category</h1>
+    <h1>{% trans %}Edit Category{% endtrans %}</h1>
 
     {{ form_start(form, {'attr': {'id': 'form_book_edit'}}) }}
 

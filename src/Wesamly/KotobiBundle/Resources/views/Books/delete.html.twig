@@ -1,24 +1,24 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Delete Book{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Delete Book{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li><a href="{{ path('wesamly_kotobi_bookslist') }}">Books</a></li>
-        <li class="active">Delete</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li><a href="{{ path('wesamly_kotobi_bookslist') }}">{% trans %}Books{% endtrans %}</a></li>
+        <li class="active">{% trans %}Delete{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>Delete Book</h1>
+    <h1>{% trans %}Delete Book{% endtrans %}</h1>
 
     <div class="panel panel-danger">
         <div class="panel-heading">
             <h3 class="panel-title">{{ book.title }}</h3>
         </div>
         <div class="panel-body">
-            <p>Are you sure about deleting this book?</p>
+            <p>{% trans %}Are you sure about deleting this book?{% endtrans %}</p>
             {{ form_start(form) }}
 
             {{ form_widget(form.confirm, {'attr': {'class': 'btn btn-danger'}}) }}

@@ -22,7 +22,7 @@ class SecurityController extends Controller
             $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
             $session->remove(SecurityContext::AUTHENTICATION_ERROR);
         }
-
+        $request->setLocale('ar_LY');
         return $this->render(
             'WesamlyKotobiBundle:Security:login.html.twig',
             array(
@@ -34,8 +34,5 @@ class SecurityController extends Controller
 
     }
 
-    public function aboutAction()
-    {
-        return $this->render('WesamlyKotobiBundle:Default:about.html.twig');
-    }
+
 }

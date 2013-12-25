@@ -100,4 +100,12 @@ wesamly_kotobi_deletetag:
     pattern: /tag/delete/{id}
     defaults: { _controller: WesamlyKotobiBundle:Tag:delete }
     requirements:
-      id: \d+    
+      id: \d+
+
+
+#Language
+wesamly_kotobi_setlang:
+    pattern: /setlang/{_locale}/
+    defaults: { _controller: WesamlyKotobiBundle:Default:setlang, , _locale: en }
+    requirements:
+      _locale: en|ar

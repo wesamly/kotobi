@@ -1,28 +1,28 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Users List{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Users List{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li class="active">Users</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li class="active">{% trans %}Users{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>Users List</h1>
+    <h1>{% trans %}Users List{% endtrans %}</h1>
 
     {% for flashMessage in app.session.flashbag.get('success') %}
         <div class="alert alert-success">
             {{ flashMessage }}
         </div>
     {% endfor %}
-    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_adduser') }}"><span class="glyphicon glyphicon-plus"></span> Add User</a>
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_adduser') }}"><span class="glyphicon glyphicon-plus"></span> {% trans %}Add User{% endtrans %}</a>
 
     <table class="table">
         <thead>
         <tr>
-            <th>ID</th><th>Username</th><th>Email</th><th>Is Active</th><th>&nbsp;</th>
+            <th>{% trans %}ID{% endtrans %}</th><th>{% trans %}Username{% endtrans %}</th><th>{% trans %}Email{% endtrans %}</th><th>{% trans %}Is Active{% endtrans %}</th><th>&nbsp;</th>
         </tr>
         </thead>
         <tbody>
@@ -39,8 +39,8 @@
                     {% endif %}
                 </td>
                 <td>
-                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_edituser', {id: user.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deleteuser', {id: user.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_edituser', {id: user.id}) }}"><span class="glyphicon glyphicon-pencil"></span> {% trans %}Edit{% endtrans %}</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deleteuser', {id: user.id}) }}"><span class="glyphicon glyphicon-remove"></span> {% trans %}Delete{% endtrans %}</a></td>
             </tr>
         {% endfor %}
         </tbody>

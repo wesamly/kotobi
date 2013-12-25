@@ -15,4 +15,9 @@ class DefaultController extends Controller
     {
         return $this->render('WesamlyKotobiBundle:Default:about.html.twig');
     }
+
+    public function setlangAction($_locale)
+    {
+        return $this->redirect($this->generateUrl('wesamly_kotobi_homepage'));
+    }
 }

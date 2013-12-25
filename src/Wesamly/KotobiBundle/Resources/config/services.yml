@@ -2,6 +2,12 @@ parameters:
 #    wesamly_kotobi.example.class: Wesamly\KotobiBundle\Example
 
 services:
+  wesamly_kotobi.locale_listener:
+        class: Wesamly\KotobiBundle\EventListener\LocaleListener
+        arguments: ["%kernel.default_locale%"]
+        tags:
+            - { name: kernel.event_subscriber }
+
 #    wesamly_kotobi.example:
 #        class: %wesamly_kotobi.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Login to Kotobi</title>
+    <title>{% trans %}Login to Kotobi{% endtrans %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('bundles/wesamlykotobi/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -39,9 +39,9 @@
 
 
     <form class="form-signin" role="form" action="{{ path('wesamly_kotobi_login_check') }}" method="post">
-        <h2 class="form-signin-heading">Please login</h2>
-        <input type="text" class="form-control" placeholder="Username" required autofocus id="username" name="_username" value="{{ last_username }}">
-        <input type="password" class="form-control" placeholder="Password" required id="password" name="_password">
+        <h2 class="form-signin-heading">{% trans %}Please Login{% endtrans %}</h2>
+        <input type="text" class="form-control" placeholder="{% trans %}Username{% endtrans %}" required autofocus id="username" name="_username" value="{{ last_username }}">
+        <input type="password" class="form-control" placeholder="{% trans %}Password{% endtrans %}" required id="password" name="_password">
 
         {#
         <label class="checkbox">
@@ -49,7 +49,7 @@
         </label>
         #}
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans %}Sign in{% endtrans %}</button>
         <input type="hidden" name="_target_path" value="/kotobi/" />
 
     </form>

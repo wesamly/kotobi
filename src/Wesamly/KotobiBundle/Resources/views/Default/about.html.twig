@@ -1,15 +1,15 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - About{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}About{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li class="active">About</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li class="active">{% trans %}About{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>About</h1>
-    <p>This is books management application.</p>
+    <h1>{% trans %}About{% endtrans %}</h1>
+    <p>{% trans %}This is a books management application.{% endtrans %}</p>
 {% endblock %}

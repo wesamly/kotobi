@@ -12,7 +12,11 @@ class BookType extends AbstractType
             ->add('intro', null)
             ->add('published', null)
             ->add('type', 'choice', array(
-                    'choices' => array('Hardcover'=>'Hardcover','Paperback'=>'Paperback','E-Book'=>'E-Book'),
+                    'choices' => array(
+                        'Hardcover'=>'Hardcover',
+                        'Paperback'=>'Paperback',
+                        'E-Book'=>'E-Book'
+                    ),
                     'empty_value' => 'Choose a Type',
                 ))
             ->add('category', 'entity', array(

@@ -1,23 +1,23 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Categories{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Categories{% endtrans %}{% endblock %}
 
 {% block breadcrumb %}
     <ol class="breadcrumb">
-        <li><a href="{{ path('wesamly_kotobi_homepage') }}">Dashboard</a></li>
-        <li class="active">Categories</li>
+        <li><a href="{{ path('wesamly_kotobi_homepage') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+        <li class="active">{% trans %}Categories{% endtrans %}</li>
     </ol>
 {% endblock %}
 
 {% block content %}
-    <h1>Categories List</h1>
+    <h1>{% trans %}Categories List{% endtrans %}</h1>
 
-    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_addcategory') }}"><span class="glyphicon glyphicon-plus"></span> Add Category</a>
+    <a class="btn btn-primary btn-sm" href="{{ path('wesamly_kotobi_addcategory') }}"><span class="glyphicon glyphicon-plus"></span> {% trans %}Add Category{% endtrans %}</a>
 
     <table class="table">
         <thead>
         <tr>
-            <th>ID</th><th>Name</th><th>Books Count</th><th>&nbsp;</th>
+            <th>{% trans %}ID{% endtrans %}</th><th>{% trans %}Name{% endtrans %}</th><th>{% trans %}Books Count{% endtrans %}</th><th>&nbsp;</th>
         </tr>
         </thead>
         <tbody>
@@ -27,8 +27,8 @@
                 <td>{{ category.name }}</td>
                 <td>-</td>
                 <td>
-                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_editcategory', {id: category.id}) }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deletecategory', {id: category.id}) }}"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+                    <a class="btn btn-default btn-sm" href="{{ path('wesamly_kotobi_editcategory', {id: category.id}) }}"><span class="glyphicon glyphicon-pencil"></span> {% trans %}Edit{% endtrans %}</a>
+                    <a class="btn btn-danger btn-sm" href="{{ path('wesamly_kotobi_deletecategory', {id: category.id}) }}"><span class="glyphicon glyphicon-remove"></span> {% trans %}Delete{% endtrans %}</a></td>
             </tr>
         {% endfor %}
         </tbody>

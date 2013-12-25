@@ -1,8 +1,37 @@
 {% extends 'WesamlyKotobiBundle::layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Dashboard{% endblock %}
+{% block title %}{{ parent() }} - {% trans %}Dashboard{% endtrans %}{% endblock %}
 
 {% block content %}
-    <h1>Dashboard</h1>
-    <p>Stuff will be added later</p>
+    <h1>{% trans %}Dashboard{% endtrans %}</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>{% trans %}Books{% endtrans %}</h2>
+
+            <p>{% trans %}Manage Books{% endtrans %} </p>
+            <p><a class="btn btn-primary" href="{{ path('wesamly_kotobi_bookslist') }}" role="button">{% trans %}Start{% endtrans %} &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <h2>{% trans %}Categories{% endtrans %}</h2>
+            <p>{% trans %}Manage Categories{% endtrans %} </p>
+            <p><a class="btn btn-primary" href="{{ path('wesamly_kotobi_categorylist') }}" role="button">{% trans %}Start{% endtrans %} &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <h2>{% trans %}Tags{% endtrans %}</h2>
+            <p>{% trans %}Manage Tags{% endtrans %} </p>
+            <p><a class="btn btn-primary" href="{{ path('wesamly_kotobi_taglist') }}" role="button">{% trans %}Start{% endtrans %} &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <h2>{% trans %}Users{% endtrans %}</h2>
+
+            <p>{% trans %}Manage Users{% endtrans %} </p>
+            <p><a class="btn btn-primary" href="{{ path('wesamly_kotobi_userlist') }}" role="button">{% trans %}Start{% endtrans %} &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <h2>{% trans %}About{% endtrans %}</h2>
+            <p>{% trans %}About Kotobi{% endtrans %} </p>
+            <p><a class="btn btn-primary" href="{{ path('wesamly_kotobi_about') }}" role="button">{% trans %}Read{% endtrans %} &raquo;</a></p>
+        </div>
+
+    </div>
 {% endblock %}

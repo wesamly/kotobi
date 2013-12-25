@@ -20,8 +20,12 @@ Features Implemented
 
   * Tags
 
+  * Translation ( to Arabic)
+
 ToDos
 ------
 
-  * Translation
+  * Unit Testing
+
+
 
